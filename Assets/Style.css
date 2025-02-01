@@ -1,4 +1,8 @@
 body {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    margin: 0;  /* Removes default margin */
+    padding: 0;  /* Removes default padding */
+
     font-family: "Press Start 2P", 'Courier New', Courier, monospace;  /* Using a custom font */
     color: rgb(51, 255, 51);  /* Light green text color */
     font-size: .7em; /* Default font size */
@@ -34,13 +38,36 @@ a:hover {
     color: rgb(255, 204, 0);  /* Orange hover effect */
 }
 
+ul {
+    display: flex;  /* Flexbox layout for list items */
+    flex-direction: column;  /* Stacking list items vertically */
+}
+
+.image-text-container {
+    display: flex;  /* Flexbox layout for image and text container */
+    align-items: center;  /* Centering items vertically */
+    gap: 2em;  /* Gap between image and text */
+}
 
 header{
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    width: 100%;  /* Full width header */
+    padding: 0;  /* Padding around the header */
     text-align: center; /* Centering the header */
+    margin-bottom: 20px;  /* Adding space below the header */
+}
+
+header > img {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    width: 150px;  /* Full width image */
+    height: auto;  /* Responsive height */
+    border-radius: 50%;  /* Rounding the image */
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);  /* Adding a shadow to the image */
 }
 
 
 .contact-info {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     width: 100%;
     margin: 20px auto; /* Centers the table */
     border-collapse: collapse;  /* Making the table borderless */
@@ -55,12 +82,43 @@ header{
     margin-bottom: 8px; /* Adding a caption to the table */
 }
 
+/* Using flexbox to put the education and skills sections side by side */
+.container {
+    display: flex;  /* Flexbox layout for container */
+    gap: 20px;  /* Gap between items */
+}
+
+
+
 /* Adding a border to the quote to seperate from the rest of the CV */
 blockquote  {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     padding: 10px;
     margin: 10px;
     border: 2px solid rgb(128, 0, 128);
     border-radius: 15px;
+}
+
+#introduction {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    width: 100%;  /* Full width header */
+    padding: 0;  /* Padding around the content */
+    margin: 20px auto; /* Centers the text */
+}
+
+#education {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    width: 50%;  /* Half width for education */
+    padding: 0;  /* Padding around the content */
+    margin: 20px auto; /* Centers the text */
+}
+
+#skills {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    width: 50%;  /* Half width for skills */
+    padding: 0;  /* Padding around the content */
+    margin: 20px auto; /* Centers the text */
+    line-height: 1.5em;
 }
 
 /* Making the footer and header have a different color */
@@ -98,6 +156,7 @@ hr {
 }
 
 #contact {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     width: 100%;
     max-width: 600px; /* Limits the width of the form */
     margin: 20px auto; /* Centers the form */
