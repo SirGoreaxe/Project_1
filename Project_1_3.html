@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This links to the css Style sheet and the font from Google Fonts. -->
+    <link rel="stylesheet" href="assets/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Robert Baker CV</title>
+</head>
+<header>
+    <img src="assets/Profile_Picture.jpg" alt="Robert Baker" width="150">
+    <h1>Robert Baker</h1>
+    <!-- The address section is a collection of contact information in a table. -->
+    <address>
+        <table id="contact-info" class="contact-info">
+            <caption>Contact Information</caption>
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>LinkedIn</th>
+                    <th>GitHub</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="mailto:Robert.W.Baker.1@gmail.com">Robert.W.Baker1@gmail.com</a></td>
+                    <td><a href="tel:1-260-312-4866">1-260-312-4866</a></td>
+                    <td><a href="https://www.linkedin.com/in/robert-w-baker">Robert W Baker</a></td>
+                    <td><a href="https://github.com/SirGoreaxe">SirGoreaxe</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </address>
+    
+    <hr>
+</header>
+<body>
+    <!-- This is a section for my introduction, plus a quote to inject a bit of my personality -->
+    <section id="introduction">
+        <h2>Introduction</h2>
+         <p> 
+            I am a motivated and detail-oriented aspiring software developer with a strong passion for technology and problem-solving. Having recently completed a comprehensive software development course, I’ve created innovative projects that extended beyond the course requirements, showcasing my ability to think creatively and deliver results. With a solid background in computer hardware and an AWS Fundamentals Certification, I am eager to apply my skills and knowledge to contribute to impactful software solutions while growing my career in the tech industry.
+        </p>
+        <blockquote>
+            &ldquo;I am rarely happier than when spending an entire day programming my computer to perform automatically a task that it would otherwise take me a good ten seconds to do by hand.&rdquo;
+            <footer>
+                -Douglas Adams, <cite>Last Chance to See</cite>
+            </footer>
+        </blockquote>
+    </section>
+    
+    <!-- This section provides a brief overview of my education in an unnumbered list with a logo with an embeded link. -->
+     <section id="Education">        
+        <h2>Education</h2>
+        <ul>    
+            <li>
+                <h3>Springboard Software Development Course</h3>
+                <p>Completed in 2025</p>
+                <a href="https://www.springboard.com"><img src="Assets/Springboard_logo.png" alt="Springboard logo and Link" height=40></a>
+            </li>
+            <li>
+                <h3>AWS Fundamentals Certification</h3>
+                <p>Completed in 2020.</p>
+                <a href="https://www.credly.com/badges/02ec6af7-c939-445d-925b-c8f119413c47"><img src="Assets/AWS_Badge.png" alt="AWS Badge and Credly Link" height=60></a>
+            </li>
+            <li>
+                <h3>Navy Nuclear Propulsion Program</Prog></h3>
+                <p>Completed in 2003 as a Nuclear Machinist Mate.</p>
+                <a href="https://www.nnp.navy.mil/training-and-development/navy-nuclear-propulsion-program/nuclear-machinist-mate-program/nuclear-machinist-mate-program-overview"><img src="Assets/NNPTC_Badge.jpg" alt="NPP Badge and Link" height=50></a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- This section provides an unnumbered list of skills. -->
+     <section id="Skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>AWS</li>
+            <li>GitHub</li>
+        </ul>
+    </section>
+    
+    <!-- This section contains a numbered listing of my projects with links to my google drive, I want to eventually get my GitHub set up for this. -->
+     <section id="Projects">
+        <h2>Projects</h2>
+        <ol>
+            <li>
+                <h3>Profesional CV</h3>
+                <p>My first project was a Profesional CV website that showcased my skills and projects. It was built using HTML, CSS, and JavaScript.</p>
+                <a href="https://drive.google.com/drive/folders/1plauH6cu-LwZladWr1TDjp3bZMxFyBi4?usp=drive_link">View Project 1</a>
+            </li>
+            <li>
+                <h3>Julius Caesar's Secret Party</h3>
+                <p>The second project was a JavaScript focused project on hashing out some a secret party list.</p>
+                <a href="https://drive.google.com/drive/folders/1plauH6cu-LwZladWr1TDjp3bZMxFyBi4?usp=drive_link">View Project 2</a>
+            </li>
+     </section>
+     <hr>
+
+     <!-- This section contains a form for contacting me. -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <label>
+                    Name:
+                    <input type="text" name="name">
+                </label>
+                <br>
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                </label>
+                <br>
+                <label>
+                    Phone:
+                    <input type="tel" name="phone">
+                </label>
+                <br>
+                <label>
+                    Message:
+                    <textarea name="message" rows="4" cols="50" placeholder="When can you start!"></textarea>
+                </label>
+                <br>
+                <label for="preference">Contact Preference:
+                <select name="preference" id="preference">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="text">Text</option>
+                </select>
+                </label>
+                <br>
+                <label>
+                    Please rate my website:
+                    <input type="range" name="rating" id="slider" min="1" max="10" value="5">
+                </label>
+                <br>
+                <button class="submit"><img src="/Assets/Submit.png" height="50" alt="Submit"></button>
+            </form>
+</body>
+</html>

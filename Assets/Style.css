@@ -1,0 +1,168 @@
+body {
+    font-family: "Press Start 2P", 'Courier New', Courier, monospace;  /* Using a custom font */
+    color: rgb(51, 255, 51);  /* Light green text color */
+    font-size: .7em; /* Default font size */
+    /* Adding a radial gradient background to the body to make it look like an old CRT monitor, and adding scan lines. */
+    background: 
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 255, 0, 0.05) 0px,  
+      rgba(0, 255, 0, 0.02) 2px,
+      transparent 4px,
+      transparent 6px
+    ),
+    radial-gradient(circle, 
+    rgba(16, 24, 16, 1) 0%,   
+    rgba(8, 12, 8, 0.9) 40%,  
+    rgba(2, 2, 2, 1) 90%      
+    );
+    background-size: auto, cover; /* Ensures scanlines repeat while gradient fills screen */
+    background-attachment: fixed; /* Keeps the background static while scrolling */
+    background-position: center; /* Centers the gradient */
+    height: 100vh; /* Makes sure the body takes the full viewport height */
+    margin: 0; /* Removes default margin */
+    overflow: auto; /* Enables scrolling for content while keeping the background fixed */
+    padding: 20px; /* Adds some padding around the content */
+}
+
+a {
+    color: rgb(0, 204, 255);  /* Light blue links to mimic old link color*/
+    text-decoration: none;  /* Removing linke underlines */
+}
+
+a:hover {
+    color: rgb(255, 204, 0);  /* Orange hover effect */
+}
+
+
+header{
+    text-align: center; /* Centering the header */
+}
+
+
+.contact-info {
+    width: 100%;
+    margin: 20px auto; /* Centers the table */
+    border-collapse: collapse;  /* Making the table borderless */
+    text-align: center;  /* Centering the text */
+}
+
+.contact-info th, .contact-info td {
+    padding: 8px 12px;  /* Padding for cells */
+}
+
+.contact-info caption {
+    margin-bottom: 8px; /* Adding a caption to the table */
+}
+
+/* Adding a border to the quote to seperate from the rest of the CV */
+blockquote  {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgb(128, 0, 128);
+    border-radius: 15px;
+}
+
+/* Making the footer and header have a different color */
+footer {
+    font-size: 0.8em;
+    color: rgb(128, 0, 128);
+}
+
+/* Setting the font size, color, and adding a shadow to text of the headers */
+h1 {
+    font-size: 2.5em;
+    color: rgb(128, 0, 128);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Adding a shadow to the text */
+}
+
+h2 {
+    font-size: 2em;
+    color: rgb(128, 0, 128);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Adding a shadow to the text */
+
+}
+h3 {
+    color: rgb(128, 0, 128);
+}
+
+/* Styling the list color to match headers */
+ol li::marker {
+    color: rgb(128, 0, 128);
+}
+
+/* Styling the rule line to fit the page and match the colors */
+hr {
+    border: 4px solid rgb(128, 0, 128);
+    margin: 20px 0;
+}
+
+#contact {
+    width: 100%;
+    max-width: 600px; /* Limits the width of the form */
+    margin: 20px auto; /* Centers the form */
+    padding: 20px;  /* Padding around the form */
+    background: rgba(0, 0, 0, 0.6); /* Dark background for a CRT feel */
+    color: #33FF33; /* Green text color for retro CRT look */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Adding a shadow to the form */
+    font-size: .7em; /* Slightly smaller font size */
+}
+
+h2 {
+    text-align: center;  /* Centering the header */
+    color: rgb(128, 0, 128);  /* Purple header color */
+}
+
+form label {
+    display: block; /* Ensures labels take full width */
+    margin-bottom: 10px; /* Adds space between labels */
+}
+
+form input, form textarea, form select {
+    width: 100%; /* Makes the form fields span the full width */
+    padding: 10px;
+    border: 1px solid rgb(128, 0, 128); /* Purple borders for the fields */
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    color: rgb(51, 255, 51); /* Green text color inside the fields */
+    border-radius: 4px; /* Rounded edges for inputs */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+form input[type="range"] {
+    width: 100%; /* Makes the range slider span the full width */
+}
+
+form button.submit {
+    background: none; /* Removes the background of the button */
+    border: none;  /* Removes the border of the button */
+    cursor: pointer;  /* Changes the cursor to a pointer */
+    margin-top: 15px;  /* Adds some space above the button */
+}
+
+form button.submit img {
+    width: 100%; /* Makes the image button fit the button */
+    max-width: 150px; /* Limits the size of the image button */
+    height: auto;
+}
+
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="tel"]:focus, form select:focus, form textarea:focus {
+    border-color: rgb(255, 204, 0); /* Focused field border color */
+    outline: none; /* Removes default outline */
+}
+
+form input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(51, 255, 51); /* Color for the slider thumb */
+}
+
+form input[type="range"]::-moz-range-thumb {
+    background-color: rgb(51, 255, 51); /* For Firefox */
+}
+
+form textarea {
+    resize: vertical; /* Allows resizing of the textarea */
+}
+
+form select {
+    padding: 10px; /* Adds padding inside the select box */
+}
