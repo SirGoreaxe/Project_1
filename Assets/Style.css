@@ -121,6 +121,13 @@ blockquote  {
     line-height: 1.5em;
 }
 
+#projects {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+    width: 100%;  /* Full width for projects */
+    padding: 0;  /* Padding around the content */
+    margin: 20px auto; /* Centers the text */
+}
+
 /* Making the footer and header have a different color */
 footer {
     font-size: 0.8em;
