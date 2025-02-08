@@ -43,43 +43,34 @@ ul {
     flex-direction: column;  /* Stacking list items vertically */
 }
 
-.image-text-container {
-    display: flex;  /* Flexbox layout for image and text container */
-    align-items: center;  /* Centering items vertically */
-    gap: 2em;  /* Gap between image and text */
+address {
+    display: inline;  /* Making the address appear inline */
+    position: absolute;  /* Positioning the address */
+    right: 0;  /* Aligning the address to the right */
 }
-
 header{
     box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     width: 100%;  /* Full width header */
     padding: 0;  /* Padding around the header */
-    text-align: center; /* Centering the header */
     margin-bottom: 20px;  /* Adding space below the header */
 }
 
 header > img {
+    display: inline;
+    position: relative;  /* Positioning the image */
+    left: 45%;  /* Centering the image */
+
     box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
-    width: 150px;  /* Full width image */
+    width: 10%;  /* Full width image */
     height: auto;  /* Responsive height */
     border-radius: 50%;  /* Rounding the image */
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);  /* Adding a shadow to the image */
 }
 
 
-.contact-info {
-    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
-    width: 100%;
-    margin: 20px auto; /* Centers the table */
-    border-collapse: collapse;  /* Making the table borderless */
-    text-align: center;  /* Centering the text */
-}
-
 .contact-info th, .contact-info td {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     padding: 8px 12px;  /* Padding for cells */
-}
-
-.contact-info caption {
-    margin-bottom: 8px; /* Adding a caption to the table */
 }
 
 /* Using flexbox to put the education and skills sections side by side */
@@ -135,7 +126,11 @@ footer {
 }
 
 /* Setting the font size, color, and adding a shadow to text of the headers */
-h1 {
+header > h1 {
+    position: absolute;
+    left: 20px;  /* Positioning the header */
+    top: 10px;
+    display: inline;
     font-size: 2.5em;
     color: rgb(128, 0, 128);
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Adding a shadow to the text */
