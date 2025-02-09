@@ -43,11 +43,6 @@ ul {
     flex-direction: column;  /* Stacking list items vertically */
 }
 
-address {
-    display: inline;  /* Making the address appear inline */
-    position: absolute;  /* Positioning the address */
-    right: 0;  /* Aligning the address to the right */
-}
 header{
     box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     width: 100%;  /* Full width header */
@@ -55,6 +50,33 @@ header{
     margin-bottom: 20px;  /* Adding space below the header */
 }
 
+.rolling {
+    transition:
+      transform 3s ease-in-out;  /* Rotating and moving the text */
+}
+
+.rolling:hover {
+    transform:
+        translate(300px) rotate(360deg);  /* Rotating and moving the text */
+}
+
+@media (max-width: 1079px) {   /* Making the header vertical at 1079px */
+    header{
+        display: flex;  /* Flexbox layout for header */
+        flex-direction: column;  /* Stacking header items vertically */
+        align-items: center;  /* Centering items vertically */
+        gap: 20px;  /* Gap between items */
+    }
+    header > img {
+        box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+        width: 20%;  /* Full width image */
+        height: auto;  /* Responsive height */
+        border-radius: 50%;  /* Rounding the image */
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);  /* Adding a shadow to the image */
+    }
+}
+
+@media (min-width: 1080px) {  /* Making the header horizontal at 1080px */
 header > img {
     display: inline;
     position: relative;  /* Positioning the image */
@@ -67,19 +89,32 @@ header > img {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);  /* Adding a shadow to the image */
 }
 
+address {
+    display: inline;  /* Making the address appear inline */
+    position: absolute;  /* Positioning the address */
+    right: 0;  /* Aligning the address to the right */
+}
 
 .contact-info th, .contact-info td {
     box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
     padding: 8px 12px;  /* Padding for cells */
 }
 
-/* Using flexbox to put the education and skills sections side by side */
-.container {
-    display: flex;  /* Flexbox layout for container */
-    gap: 20px;  /* Gap between items */
+header > h1 {
+    position: absolute;
+    left: 20px;  /* Positioning the header */
+    top: 10px;
+    display: inline;
+    font-size: 2.5em;
+    color: rgb(128, 0, 128);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Adding a shadow to the text */
+}
 }
 
-
+.image-text-container {  /* Providing a inline box and padding for the image */
+    display: flex;  
+    gap: 20px;  /* Gap between items */
+}
 
 /* Adding a border to the quote to seperate from the rest of the CV */
 blockquote  {
@@ -95,6 +130,15 @@ blockquote  {
     width: 100%;  /* Full width header */
     padding: 0;  /* Padding around the content */
     margin: 20px auto; /* Centers the text */
+}
+
+@media (min-width: 720px)   /* Making the layout responsive at 480px width */
+{
+/* Using flexbox to put the education and skills sections side by side */
+.container {
+    display: flex;  /* Flexbox layout for container */
+    gap: 20px;  /* Gap between items */
+}
 }
 
 #education {
@@ -126,15 +170,6 @@ footer {
 }
 
 /* Setting the font size, color, and adding a shadow to text of the headers */
-header > h1 {
-    position: absolute;
-    left: 20px;  /* Positioning the header */
-    top: 10px;
-    display: inline;
-    font-size: 2.5em;
-    color: rgb(128, 0, 128);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Adding a shadow to the text */
-}
 
 h2 {
     font-size: 2em;
